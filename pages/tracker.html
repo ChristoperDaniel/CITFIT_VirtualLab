@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker Latihan</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="home-header">
+        <div class="header-content">
+            <h1 class="site-title">Tracker <span>Latihan Olahraga</span></h1>
+            <p class="site-tagline">Pilih jenis olahraga untuk memulai pelacakan latihan.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="home-main">
+        <section class="tracker-section">
+            <button class="nav-button" onclick="showExercise('lari')">Lari</button>
+            <button class="nav-button" onclick="showExercise('pushup')">Push-Up</button>
+            <button class="nav-button" onclick="showExercise('basket')">Basket</button>
+        </section>
+
+        <section id="exercise-instructions" class="material-card" style="display: none;">
+            <h2 id="exercise-title">Instruksi</h2>
+            <p id="exercise-description"></p>
+            <button class="nav-button" onclick="startExercise()">Mulai Latihan</button>
+            <div id="exercise-area" style="display: none;">
+                <p id="exercise-status">Latihan sedang berjalan...</p>
+                <button id="stop-btn" class="nav-button" onclick="stopExercise()">Stop Latihan</button>
+                <p id="exercise-counter">Jumlah repetisi: 0</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <a href="../index.html" class="nav-button">Kembali ke Beranda</a>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
