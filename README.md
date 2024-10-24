@@ -1,4 +1,5 @@
-# Website ini adalah sebuah virtual lab untuk mata kuliah TPB ITB, yaitu Olahraga
+#CIT FIT
+Website ini adalah sebuah virtual lab untuk mata kuliah TPB ITB, yaitu Olahraga
 Ada beberapa penjelasan terkait olahraga, seperti:
 1. Push-up
 2. Sit-up
