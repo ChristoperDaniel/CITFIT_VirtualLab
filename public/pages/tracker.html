@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Tracker - CIT FIT</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- link to fontawesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <ul class="navmenu">
+            <button id="menu-close-button" class="fas fa-times"></button>
+            <li class="navlist"><a href="home" class="navlink">Home</a></li>
+            <li class="navlist"><a href="material" class="navlink">Material</a></li>
+        </ul>
+        <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+    
+    <!-- header -->
+    <header class="home-header">
+        <div class="header-content">
+            <h1 class="site-title">Exercise <span>Tracker</span></h1>
+            <p class="site-subtitle">Choose the exercise you want to track.</p>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main class="home-main">
+        <section class="tracker-section">
+            <button class="navbutton" onclick="showExercise('pushup')">Push-Up</button>
+            <button class="navbutton" onclick="showExercise('situp')">Sit-Up</button>
+            <button class="navbutton" onclick="showExercise('backup')">Back-Up</button>
+            <button class="navbutton" onclick="showExercise('squat')">Squat</button>
+        </section>
+
+        <section id="exercise-instructions" class="material-card" style="display: none;">
+            <h2 id="exercise-title">Instruksi</h2>
+            <p id="exercise-description"></p>
+            <button class="navbutton" onclick="startExercise()">Start Exercise</button>
+            <div id="exercise-area" style="display: none;">
+                <p id="exercise-status">Exercise is starting...</p>
+                <button id="stop-btn" class="navbutton" onclick="stopExercise()">Stop Exercise</button>
+                <p id="timer-display">Time left: 30 seconds</p>
+            </div>
+        </section>
+
+        <div class="container-result">
+            <h1>Result</h1>
+            <form action="/tracker" method="POST "id="exerciseForm">
+                <label for="pushUps">Push-Ups:</label>
+                <input type="number" id="pushUps" name="pushUps" min="0" placeholder="Enter push-ups done">
+                <br>
+                <label for="sitUps">Sit-Ups:</label>
+                <input type="number" id="sitUps" name="sitUps" min="0" placeholder="Enter sit-ups done">
+                <br>
+                <label for="backUps">Back-Ups:</label>
+                <input type="number" id="backUps" name="backUps" min="0" placeholder="Enter back-ups done">
+                <br>
+                <label for="squats">Squats:</label>
+                <input type="number" id="squats" name="squats" min="0" placeholder="Enter squats done">
+                <br>
+                <button type="button" id="submitExercise">Submit</button>
+            </form>
+            <div id="exerciseResults">
+                <h2>Highest Results:</h2>
+                <p id="pushUpsResult">Push-Ups: 0</p>
+                <p id="sitUpsResult">Sit-Ups: 0</p>
+                <p id="backUpsResult">Back-Ups: 0</p>
+                <p id="squatsResult">Squats: 0</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="site-footer">
+        <a href="home" class="navbutton">Back to Home</a>
+        <p>&copy; Christoper Daniel (2024)</p>
+    </footer>
+
+    <script src="../js/tracker.js"></script>
+</body>
+</html>
