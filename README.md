@@ -1,4 +1,9 @@
 # CIT FIT
+
+## Homepage
+![alt text](homepage.png)
+
+## Description
 Website ini adalah sebuah virtual lab untuk mata kuliah TPB ITB, yaitu Olahraga
 Ada beberapa penjelasan terkait olahraga, seperti:
 1. Push-up
@@ -9,3 +14,7 @@ Ada beberapa penjelasan terkait olahraga, seperti:
 6. Futsal
 
 Selain itu, ada juga tracker untuk exercise sit-up, push-up, back-up, dan squat dengan timer 30 detik.
+Nantinya tracker akan mencatat hasil tertinggi sebagai highest record user dalam melakukan exercise.
+
+![alt text](HighestResult.png)
+
